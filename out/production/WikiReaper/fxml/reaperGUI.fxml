@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRippler?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.validation.RequiredFieldValidator?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainAnchorPane" prefHeight="99.0" prefWidth="474.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sisyphus.WikiReaper.Controller">
+   <children>
+      <JFXTextArea fx:id="resultTextArea" editable="false" labelFloat="true" layoutX="12.0" layoutY="54.0" prefHeight="17.0" prefWidth="453.0" />
+      <JFXTextField id="validatedText" fx:id="searchTextField" labelFloat="true" layoutX="14.0" layoutY="4.0" prefHeight="36.0" prefWidth="310.0" promptText="type a keyword">
+          <validators>
+              <RequiredFieldValidator message="input is required">
+                  <FontAwesomeIconView glyphName="WARNING" style="-fx-font-family: FontAwesome;" />
+              </RequiredFieldValidator>
+          </validators>
+
+      </JFXTextField>
+      <JFXRippler fx:id="rippler" layoutX="332.0" layoutY="14.0" maskType="CIRCLE" position="BACK" prefHeight="22.0" prefWidth="89.0">
+         <children>
+            <JFXButton fx:id="searchButton" buttonType="RAISED" contentDisplay="CENTER" defaultButton="true" minHeight="-Infinity" minWidth="-Infinity" prefHeight="26.0" prefWidth="89.0" styleClass=".button-raised" stylesheets="/css/styleSheet.css" text="Search">
+               <font>
+                  <Font size="10.0" />
+               </font></JFXButton>
+         </children>
+      </JFXRippler>
+   </children>
+</AnchorPane>
